@@ -1,4 +1,5 @@
 Star [] ferb;
+int Clicks = 16;
 void setup(){
   noStroke();
   size(500,500);
@@ -12,6 +13,7 @@ void setup(){
 }
 
 void draw(){
+  if(Clicks % 15 != 0){
   background(0);
   fill(255);
   ellipse(190,250,100,50);
@@ -23,7 +25,18 @@ void draw(){
      ferb[i].show();
      ferb[i].move();
    }
-   
+ }
+ else if(Clicks % 15 == 0){
+  stroke(2);
+  background(255);
+  fill(255,0,0);
+  ellipse(190,250,100,50);
+  ellipse(310,250,100,50);
+  fill(0,191,255);
+  ellipse(190,250,50,50);
+  ellipse(310,250,50,50);
+  
+ }
 }
 
 class Star{
@@ -57,7 +70,7 @@ void mousePressed(){
     ferb[i].myAngle = Math.random()*2*Math.PI;
     ferb[i].mySpeed = Math.random()*15+1;
   }
-  
+  Clicks = Clicks + 1;
 }
 class Planet extends Star{
   Planet(){
