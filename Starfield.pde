@@ -28,8 +28,8 @@ void draw(){
  }
  else if(Clicks % 5 == 0){
   stroke(2);
-  background(255);
-  fill(255,0,0);
+  background(0);
+  fill(255);
   ellipse(190,250,100,50);
   ellipse(310,250,100,50);
   fill(0);
