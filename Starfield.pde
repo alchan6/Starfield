@@ -13,7 +13,7 @@ void setup(){
 }
 
 void draw(){
-  if(Clicks % 15 != 0){
+  if(Clicks % 5 != 0){
   background(0);
   fill(255);
   ellipse(190,250,100,50);
@@ -26,7 +26,7 @@ void draw(){
      ferb[i].move();
    }
  }
- else if(Clicks % 15 == 0){
+ else if(Clicks % 5 == 0){
   stroke(2);
   background(255);
   fill(255,0,0);
